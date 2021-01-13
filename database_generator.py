@@ -2,7 +2,7 @@ import sqlite3
 from pathlib import Path
 import os
 
-#To create database which contains the list of all the PDFs and their paths present in the system
+#To create database which contains the list of all the files and their paths present in the system
 def generate():
     dbconnect = sqlite3.connect("filepathdatabase.sqlite")
 
@@ -26,7 +26,7 @@ def generate():
     CREATE TABLE misc (filepath VARCHAR,
                     misc_files VARCHAR);""")
 
-    #This function is used for recursion to create the path of every PDF present in the system.
+    #This function is used for recursion to create the path of every file present in the system.
     def creater(pathname):
         for x in os.scandir(pathname):
             try:

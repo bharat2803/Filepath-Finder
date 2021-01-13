@@ -1,4 +1,4 @@
-from PDFfilepaths import fetchpath
+from filepath import fetchpath
 import os
 from getfileslist import getlist
 from database_generator import generate
