@@ -13,7 +13,8 @@ if __name__ == "__main__":
     clr = os.system("cls")
     sleep(0.75)
     print("\t \t \t \t\t\tDOCUMENTS LISTER AND PATH FINDER \n \n \n\n\n\n")
-    print("\tWelcome to the Documents lister and path finder. falana dhamkana. \n \n\n")
+    print("""\tWelcome to the Documents lister and path finder. It allows you to view lists of various types of files
+    \t  and get their location in the system. \n \n\n""")
     print("Kindly choose one of the options below:\n\n")
     print("""1. View list of all PDFs present in your system.
 2. View list of all Word Documents present in your system.

@@ -5,7 +5,7 @@ from pathlib import Path
 #To get the filepath of the file given.
 def fetchpath(filename):
         try:
-            dbconnect = sqlite3.connect("pdfdatabase.sqlite")
+            dbconnect = sqlite3.connect("filepathdatabase.sqlite")
             dbcursor = dbconnect.cursor()
             extn = filename.rsplit('.',1)[1]
             if extn == 'pdf':
@@ -26,6 +26,7 @@ def fetchpath(filename):
                 print(f"There are {l} {filename} files at different locations:\n")
                 for i,filepath in enumerate(filepaths):
                     print(i+1,f") {filepath[0]}")
+                return 1
             else:
                 print(f"\n\nThe path of the file, {filename}, is: {filepaths[0][0]}")
                 return 1

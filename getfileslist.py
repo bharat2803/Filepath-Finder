@@ -4,7 +4,7 @@ from pathlib import Path
 
 def getlist(choice):
 
-    dbconnect = sqlite3.connect("pdfdatabase.sqlite")
+    dbconnect = sqlite3.connect("filepathdatabase.sqlite")
     dbcursor = dbconnect.cursor()
     if choice == 1:
         print("\n\n  These are all the PDF files present in your system: \n\n")
