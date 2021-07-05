@@ -12,7 +12,7 @@ if __name__ == "__main__":
     generate()      #To create database which contains list of all the files and their path presnt in the system.
     clr = os.system("cls")
     sleep(0.75)
-    print("\t \t \t \t\t\tDOCUMENTS LISTER AND PATH FINDER \n \n \n\n\n\n")
+    print("\t \t \t \t\t\t\t DOCUMENTS LISTER AND PATH FINDER \n \n \n\n\n\n")
     print("""\tWelcome to the Documents lister and path finder. It allows you to view lists of various types of files
     \t  and get their location in the system. \n \n\n""")
     print("Kindly choose one of the options below:\n\n")
