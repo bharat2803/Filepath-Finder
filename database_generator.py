@@ -9,12 +9,12 @@ def generate():
     dbcursor = dbconnect.cursor()
 
     dbcursor.executescript("""
-    DROP TABLE IF EXISTS PDFs;
+    DROP TABLE IF EXISTS pdfs;
     DROP TABLE IF EXISTS docs;
     DROP TABLE IF EXISTS excels;
     DROP TABLE IF EXISTS misc;
 
-    CREATE TABLE PDFs (filepath VARCHAR,
+    CREATE TABLE pdfs (filepath VARCHAR,
                     pdf_files VARCHAR);
 
     CREATE TABLE docs (filepath VARCHAR,
@@ -37,7 +37,7 @@ def generate():
                 if os.path.isfile(x):
                     if x.name.split('.')[-1] == "pdf":
                         filepath= os.path.join(pathname,x.name)
-                        dbcursor.execute("INSERT INTO PDFs (filepath,pdf_files) VALUES (?,?)",(filepath,x.name,))
+                        dbcursor.execute("INSERT INTO pdfs (filepath,pdf_files) VALUES (?,?)",(filepath,x.name,))
 
                     elif x.name.split('.')[-1] == "docx" or x.name.split('.')[-1] == "doc":
                         filepath= os.path.join(pathname,x.name)
